@@ -1,47 +1,55 @@
-import { useLocation } from 'react-router-dom'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
-
-import Login from './Login'
-import Profile from './Profile'
-import Register from './Register'
-import ResetPassword from './ResetPassword'
+import { BrowserRouter as Router, useLocation, Switch } from 'react-router-dom'
+import CardForm from './CardForm'
+import CardLoginButton from './CardLoginButton'
+import CardRegisterButton from './CardRegisterButton'
+import CardResetPasswordButton from './CardResetPasswordButton'
 
 const Card = () => {
-    const location = useLocation()
 
+    const location = useLocation()
 
 
     return (
 
-<Router>
-
+    <Router>
         <div  className="hold-transition login-page">
-            <div className="login-box"></div>
-        <div className='card'>
-        <div className='card-body login-card-body'>
+            <div className="login-box">
+                <div className='card'>
+                    <div className='card-body login-card-body'>
 
-        {/* <Login/>
-        <ResetPassword/>
-        <Register/> */}
+                        <CardForm/>
+                        <div className="social-auth-links text-center mb-3">
+                            
+                            <p>- OR -</p>
 
+                            <Switch>                    
+                           
+                            {location.pathname === '/reset-password'  && 
+                                <>
+                                    <CardLoginButton/>
+                                    <CardRegisterButton/>
+                                </>
+                            }
+                             {location.pathname === '/register'  && 
+                                <>
+                                    <CardLoginButton/>
+                                    <CardResetPasswordButton/>
+                                </>
+                            }
+                             {location.pathname === '/'  && 
+                                <>
+                                    <CardResetPasswordButton/>
+                                    <CardRegisterButton/>
+                                </>
+                            }
+                            </Switch>
 
-            {location.pathname === '/'  && 
-                <Login/>
-            }
-            {location.pathname === '/reset-password'  && 
-                <ResetPassword/>
-            }
+                        </div>
 
-            {location.pathname === '/register'  && 
-                <Register/>
-            }
-            {location.pathname === '/profile'  && 
-                <Profile/>
-            }
-
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    </div>
     </Router>
     )
 }

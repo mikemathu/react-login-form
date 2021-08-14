@@ -1,6 +1,6 @@
 
 import { useState } from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 import Card from './components/Card'
 import Profile from './components/Profile'
 // import Login from './components/Login'
@@ -9,8 +9,10 @@ import Profile from './components/Profile'
 
 const App = () => {
 
-  const [showCard, setShowCard] = useState(true)
-  const [showProfile, setShowProfile] = useState(false)
+  // const [showCard, setShowCard] = useState(true)
+  // const [showProfile, setShowProfile] = useState(false)
+  const [showCard] = useState(true)
+  const [showProfile] = useState(false)
 
   
 
