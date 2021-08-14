@@ -1,14 +1,36 @@
-import Header from './components/Header'
+
+import { useState } from 'react'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Card from './components/Card'
+import Profile from './components/Profile'
+// import Login from './components/Login'
+// import ResetPassword from './components/ResetPassword'
+// import Register from './components/Register'
 
 const App = () => {
+
+  const [showCard, setShowCard] = useState(true)
+  const [showProfile, setShowProfile] = useState(false)
+
+  
+
+
   return (
-    <div  className="hold-transition login-page">
-       <div className="login-box">
-        <Header/>
-        <Card/>
-      </div>
-    </div>
+
+      <>
+     
+        <Router>
+              { showCard && <Card />}
+              { showProfile && <Profile/>}
+
+              {/* { card && <Card />}
+              { profile && <Profile/>} */}
+            
+            
+          
+        </Router>
+       
+   </>
    
   )
 }
