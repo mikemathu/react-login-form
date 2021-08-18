@@ -2,16 +2,16 @@ import CardFormEmail from "./CardFormEmail"
 import CardFormPassword from "./CardFormPassword"
 import CardSignInButton from "./CardSignInButton"
 
-const Login = () => {
+const Login = ({onChange}) => {
     return (
         <>
             <p className="login-box-msg">Sign in to start your session</p>
 
-            <CardFormEmail/>
+            <CardFormEmail onChange={onChange} />
 
-            <CardFormPassword/>
+            <CardFormPassword onChange={onChange}/>
             
-            <CardSignInButton/>
+            <CardSignInButton  onChange={onChange}/>
         </>
     )
 }

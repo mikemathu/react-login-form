@@ -1,9 +1,11 @@
-import { useLocation } from 'react-router-dom'
-import { Link } from 'react-router-dom'
+import {  useLocation } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 
-const CardSignInButton = () => {
+const CardSignInButton = ({onChange}) => {
     const location = useLocation()
+
+   
 
     return (
     
@@ -13,7 +15,13 @@ const CardSignInButton = () => {
             <div className="icheck-primary">
                 {location.pathname === '/'  && 
                     <>
-                        <input id="remember" type="checkbox" autoComplete='off' /> 
+                        <input 
+                            name="checked" 
+                            type="checkbox"
+                            autoComplete='off'
+                            onChange={onChange}
+                            
+                            /> 
                         <label htmlFor="remember">
                             Remember Me
                         </label>
@@ -21,7 +29,13 @@ const CardSignInButton = () => {
                 }
                 {location.pathname === '/register'  && 
                     <>
-                        <input id="agreeTerms" name="terms" type="checkbox" value="agree" autoComplete='off' />
+                        <input 
+                            name="checked" 
+                            type="checkbox" 
+                            value="agree" 
+                            autoComplete='off'
+                            onChange={onChange}                            
+                         />
                         <label htmlFor="agreeTerms">
                             I agree to the terms
                         </label>
@@ -31,11 +45,21 @@ const CardSignInButton = () => {
         </div>
 
         <div className="col-4">
-            {location.pathname === '/'  && 
-                <Link to='/profile' className="btn btn-primary btn-block" type="submit">Signn In</Link>
-            }
+            {location.pathname === '/'  &&            
+                //  <Link to='/profile' className="btn btn-primary btn-block" type="submit">Signn In</Link> 
+                 
+                 < input
+                    className="btn btn-primary btn-block" 
+                    type="submit"
+                 />
+                 
+                }
             {location.pathname === '/register'  && 
-                <Link to='/' className="btn btn-primary btn-block" type="submit">Register</Link>
+                // <Link to='/' className="btn btn-primary btn-block" type="submit">Register</Link>
+                < input
+                   className="btn btn-primary btn-block" 
+                   type="submit"
+                />
             }
         </div>
     </div>
