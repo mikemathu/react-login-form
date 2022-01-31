@@ -2,7 +2,7 @@ import {  useLocation } from 'react-router-dom'
 // import { Link } from 'react-router-dom'
 
 
-const CardSignInButton = ({onChange}) => {
+const CardSignInButton = ({onChange,user}) => {
     const location = useLocation()
 
    
@@ -51,6 +51,7 @@ const CardSignInButton = ({onChange}) => {
                  < input
                     className="btn btn-primary btn-block" 
                     type="submit"
+                    user={user}
                  />
                  
                 }

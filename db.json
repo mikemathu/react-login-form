@@ -1,0 +1,23 @@
+{
+  "users": [
+    {
+      "email": "mathumichael16@gmail.com",
+      "password": "123",
+      "regNumber": "23",
+      "checked": false,
+      "id": 1
+    },
+    {
+      "0": {
+        "email": "mathumichael16@gmail.com",
+        "password": "123",
+        "regNumber": "23",
+        "checked": false,
+        "id": 1
+      },
+      "email": "mathumichael17@gmail.com",
+      "password": "09876",
+      "id": 2
+    }
+  ]
+}

@@ -2,7 +2,7 @@ import CardFormEmail from "./CardFormEmail"
 import CardFormPassword from "./CardFormPassword"
 import CardSignInButton from "./CardSignInButton"
 
-const Login = ({onChange}) => {
+const Login = ({onChange, users}) => {
     return (
         <>
             <p className="login-box-msg">Sign in to start your session</p>
@@ -11,7 +11,7 @@ const Login = ({onChange}) => {
 
             <CardFormPassword onChange={onChange}/>
             
-            <CardSignInButton  onChange={onChange}/>
+            <CardSignInButton  onChange={onChange} users={users}/>
         </>
     )
 }

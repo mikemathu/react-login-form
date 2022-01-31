@@ -1,0 +1,53 @@
+{
+  "tasks": [
+    {
+      "email": "mathumichael16@gmail.com",
+      "password": "123",
+      "regNumber": "123",
+      "checked": false,
+      "id": 1
+    },
+    {
+      "email": "mathumichael16@gmail.com",
+      "password": "123",
+      "regNumber": "12",
+      "checked": true,
+      "id": 2
+    },
+    {
+      "email": "mathumichael16@gmail.com",
+      "password": "123",
+      "regNumber": "56",
+      "checked": false,
+      "id": 3
+    },
+    {
+      "email": "danmwathi@gmail.com",
+      "password": "123",
+      "regNumber": "12",
+      "checked": false,
+      "id": 4
+    },
+    {
+      "email": "mike@gmail.com",
+      "password": "asxc",
+      "regNumber": "",
+      "checked": false,
+      "id": 5
+    },
+    {
+      "email": "mike@gmail.com",
+      "password": "123",
+      "regNumber": "",
+      "checked": false,
+      "id": 6
+    },
+    {
+      "email": "mathumichael16@gmail.com",
+      "password": "12",
+      "regNumber": "",
+      "checked": false,
+      "id": 7
+    }
+  ]
+}
